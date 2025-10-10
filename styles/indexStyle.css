@@ -7,12 +7,52 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body {
     min-height: 100vh;
-    background-color: #000;
-    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow-x: hidden;
 }
+
+/* Fondo fijo y desenfocado */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/FondoImagen.jpg") center center / cover no-repeat;
+    filter: blur(8px) brightness(0.7) saturate(1.2);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Contenedor central */
+.page-wrapper {
+    background: #181512;
+    width: 80%;
+    max-width: 1200px;
+    min-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* Contenido del contenedor central */
+.content {
+    text-align: center;
+    color: #fff;
+    margin-top: 200px;
+    width: 80%;
+}
+
+/* Menú de navegación principal*/
 
 .main-nav {
     position: fixed;
@@ -27,24 +67,24 @@ body {
 
 .nav-container {
     position: relative;
-    width: 600px;
-    height: 75px;
+    width: 800px;
+    height: 100px;
     background-color: #8B5E2F;
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 13px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 25px;
+    margin-right: 33px;
 }
 
 .logo img {
-    width: 90px;   
+    width: 120px;
     height: 100%;
     object-fit: contain;
     pointer-events: none;
@@ -53,45 +93,47 @@ body {
 .nav-container a {
     position: relative;
     display: inline-block;
-    font-size: 1em;
+    font-size: 1.33em;
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-    padding: 0 18px;
+    padding: 0 24px;
     z-index: 1;
 }
 
 .nav-container span {
     position: absolute;
     top: 0;
-    left: 117px; 
-    width: 95px;
+    left: 155px;
+    width: 127px;
     height: 100%;
     background: linear-gradient(45deg, #b66a12, #ffb84d);
-    border-radius: 8px;
+    border-radius: 10px;
     transition: .6s;
 }
 
-
+/* Animación hover del menú de navegación principal */
 .main-nav a:nth-of-type(1):hover ~ span {
-    left: 117px;
+    left: 155px;
+    width: 127px;
 }
 
 .main-nav a:nth-of-type(2):hover ~ span {
-    left: 202px;
+    left: 283px;
+    width: 147px;
 }
 
 .main-nav a:nth-of-type(3):hover ~ span {
-    left: 295px;
-    width: 50px;
+    left: 433px;
+    width: 67px;
 }
 
 .main-nav a:nth-of-type(4):hover ~ span {
-    left: 355px;
-    width: 135px;
+    left: 500px;
+    width: 127px;
 }
 
 .main-nav a:nth-of-type(5):hover ~ span {
-    left: 500px;
-    width: 100px;
+    left: 667px;
+    width: 133px;
 }
