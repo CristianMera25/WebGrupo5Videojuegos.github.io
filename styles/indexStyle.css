@@ -188,48 +188,77 @@ body::before {
     margin-bottom: 30px;
 }
 
+/* ===== SECCIÓN DE PERSONAJES ===== */
+.characters-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 50px 0;
+}
 
-.about-mika {
+/* Titulo de la seccion personaje */
+.characters-title {
+    font-size: 4em;
+    color: #ffb84d;
+    /* dorado cálido */
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 184, 77, 0.5);
+}
+
+/* Contenedor general de cada personaje */
+.character {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 50px;
     width: 80%;
-    margin: 80px auto;
     color: #fff;
-    background: rgba(24, 21, 18, 0.9);
+    background: rgba(40, 35, 30, 0.85);
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.mika-container {
+/* Invertir orden (imagen derecha, texto izquierda) */
+.character.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor del personaje */
+.character-container {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.mika-anim {
+/* Imagen o animación del personaje */
+.character-img {
     width: 250px;
-    /* ajusta según el tamaño de tu GIF */
     image-rendering: pixelated;
+    filter: drop-shadow(0 0 10px #d8a43b);
 }
 
-.mika-text {
+/* Texto general del personaje*/
+.character-text {
     flex: 1;
     font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
-.mika-text h2 {
+/* Titulo general del personaje*/
+.character-text h2 {
     font-size: 2em;
     color: #ffb84d;
-    /* dorado cálido */
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-.mika-text p {
+/* Parrafo general del personaje*/
+.character-text p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #e6d8c3;
