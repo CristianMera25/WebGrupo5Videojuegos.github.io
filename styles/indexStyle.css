@@ -1,12 +1,15 @@
 /* Fuentes Importadas */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     min-height: 100vh;
     display: flex;
@@ -42,14 +45,6 @@ body::before {
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
-}
-
-/* Contenido del contenedor central */
-.content {
-    text-align: center;
-    color: #fff;
-    margin-top: 200px;
-    width: 80%;
 }
 
 /* Menú de navegación principal*/
@@ -113,27 +108,129 @@ body::before {
 }
 
 /* Animación hover del menú de navegación principal */
-.main-nav a:nth-of-type(1):hover ~ span {
+/* Boton Home */
+.main-nav a:nth-of-type(1):hover~span {
     left: 155px;
     width: 127px;
 }
 
-.main-nav a:nth-of-type(2):hover ~ span {
+/* Boton Desarrollo */
+.main-nav a:nth-of-type(2):hover~span {
     left: 283px;
     width: 147px;
 }
 
-.main-nav a:nth-of-type(3):hover ~ span {
+/* Boton desarrollo */
+.main-nav a:nth-of-type(3):hover~span {
     left: 433px;
     width: 67px;
 }
 
-.main-nav a:nth-of-type(4):hover ~ span {
+/* Boton Nuestro Equipo*/
+.main-nav a:nth-of-type(4):hover~span {
     left: 500px;
     width: 127px;
 }
 
-.main-nav a:nth-of-type(5):hover ~ span {
+/* Boton juego */
+.main-nav a:nth-of-type(5):hover~span {
     left: 667px;
     width: 133px;
+}
+
+/* Estilso de la seccion Hero*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url("../img/FondoHeroSection.jpg") center center / cover no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Capa de opacidad sobre el fondo de la seccion Hero*/
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 15, 10, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+/* Contenido de la seccion Hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Logo del juego en la seccion Hero*/
+.hero-logo {
+    width: 420px;
+    max-width: 90%;
+    margin-bottom: 25px;
+}
+
+/* Frase de la seccion Hero*/
+.hero-tagline {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: #ffe7b0;
+    text-shadow: 0 0 10px rgba(255, 200, 120, 0.4);
+    margin-bottom: 30px;
+}
+
+
+.about-mika {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    width: 80%;
+    margin: 80px auto;
+    color: #fff;
+    background: rgba(24, 21, 18, 0.9);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.mika-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mika-anim {
+    width: 250px;
+    /* ajusta según el tamaño de tu GIF */
+    image-rendering: pixelated;
+}
+
+.mika-text {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.mika-text h2 {
+    font-size: 2em;
+    color: #ffb84d;
+    /* dorado cálido */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mika-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #e6d8c3;
 }
