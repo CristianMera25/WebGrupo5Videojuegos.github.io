@@ -188,6 +188,57 @@ body::before {
     margin-bottom: 30px;
 }
 
+/* ===== SECCIÓN DE INTRODUCCIÓN ===== */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 85%;
+    margin: 100px auto;
+    padding: 20px 0;
+    color: #fff;
+    background: transparent; /* sin fondo tipo tarjeta */
+}
+
+/* Texto */
+.intro-text {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.intro-text h2 {
+    font-size: 2.6em;
+    color: #ffb84d;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(255, 184, 77, 0.3);
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #e6d8c3;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen */
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255, 184, 77, 0.25);
+}
+
+
 /* ===== SECCIÓN DE PERSONAJES ===== */
 .characters-section {
     width: 100%;
