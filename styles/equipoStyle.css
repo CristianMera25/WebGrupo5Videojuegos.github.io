@@ -1,0 +1,139 @@
+/* Fuentes Importadas */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fondo fijo y desenfocado */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/FondoImagen.jpg") center center / cover no-repeat;
+    filter: blur(8px) brightness(0.7) saturate(1.2);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Contenedor central */
+.page-wrapper {
+    background: #181512;
+    width: 80%;
+    max-width: 1200px;
+    min-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* Menú de navegación principal*/
+
+.main-nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    position: relative;
+    width: 800px;
+    height: 100px;
+    background-color: #8B5E2F;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 33px;
+}
+
+.logo img {
+    width: 120px;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.nav-container a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.33em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 24px;
+    z-index: 1;
+}
+
+.nav-container span {
+    position: absolute;
+    top: 0;
+    left: 155px;
+    width: 127px;
+    height: 100%;
+    background: linear-gradient(45deg, #b66a12, #ffb84d);
+    border-radius: 10px;
+    transition: .6s;
+}
+
+/* Animación hover del menú de navegación principal */
+/* Boton Home */
+.main-nav a:nth-of-type(1):hover~span {
+    left: 155px;
+    width: 127px;
+}
+
+/* Boton Desarrollo */
+.main-nav a:nth-of-type(2):hover~span {
+    left: 283px;
+    width: 147px;
+}
+
+/* Boton desarrollo */
+.main-nav a:nth-of-type(3):hover~span {
+    left: 433px;
+    width: 67px;
+}
+
+/* Boton Nuestro Equipo*/
+.main-nav a:nth-of-type(4):hover~span {
+    left: 500px;
+    width: 127px;
+}
+
+/* Boton juego */
+.main-nav a:nth-of-type(5):hover~span {
+    left: 667px;
+    width: 133px;
+}
